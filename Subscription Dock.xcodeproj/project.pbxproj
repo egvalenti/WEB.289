@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA6323BC261C042E0045D50B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA6323BA261C042E0045D50B /* DataModel.xcdatamodeld */; };
+		FA843D98260440A6004AE6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA843D97260440A6004AE6DD /* AppDelegate.swift */; };
+		FA843D9A260440A6004AE6DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA843D99260440A6004AE6DD /* SceneDelegate.swift */; };
+		FA843D9F260440A6004AE6DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA843D9D260440A6004AE6DD /* Main.storyboard */; };
+		FA843DA1260440A9004AE6DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA843DA0260440A9004AE6DD /* Assets.xcassets */; };
+		FA843DA4260440A9004AE6DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA843DA2260440A9004AE6DD /* LaunchScreen.storyboard */; };
+		FA843DAF260440A9004AE6DD /* Subscription_DockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA843DAE260440A9004AE6DD /* Subscription_DockTests.swift */; };
+		FA843DBA260440A9004AE6DD /* Subscription_DockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA843DB9260440A9004AE6DD /* Subscription_DockUITests.swift */; };
+		FAB797E9260D41AF008CE0E6 /* NewSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB797E8260D41AF008CE0E6 /* NewSubscriptionViewController.swift */; };
+		FAB7986F261016DD008CE0E6 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7986E261016DD008CE0E6 /* AlertsViewController.swift */; };
+		FAB7987726102955008CE0E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7987626102955008CE0E6 /* MainViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA843DAB260440A9004AE6DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA843D8C260440A6004AE6DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA843D93260440A6004AE6DD;
+			remoteInfo = "Subscription Dock";
+		};
+		FA843DB6260440A9004AE6DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA843D8C260440A6004AE6DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA843D93260440A6004AE6DD;
+			remoteInfo = "Subscription Dock";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA6323BB261C042E0045D50B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		FA843D94260440A6004AE6DD /* Subscription Dock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Subscription Dock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA843D97260440A6004AE6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA843D99260440A6004AE6DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA843D9E260440A6004AE6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA843DA0260440A9004AE6DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA843DA3260440A9004AE6DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA843DA5260440A9004AE6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA843DAA260440A9004AE6DD /* Subscription DockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Subscription DockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA843DAE260440A9004AE6DD /* Subscription_DockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription_DockTests.swift; sourceTree = "<group>"; };
+		FA843DB0260440A9004AE6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA843DB5260440A9004AE6DD /* Subscription DockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Subscription DockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA843DB9260440A9004AE6DD /* Subscription_DockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription_DockUITests.swift; sourceTree = "<group>"; };
+		FA843DBB260440A9004AE6DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB797E8260D41AF008CE0E6 /* NewSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubscriptionViewController.swift; sourceTree = "<group>"; };
+		FAB7986E261016DD008CE0E6 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
+		FAB7987626102955008CE0E6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA843D91260440A6004AE6DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA843DA7260440A9004AE6DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA843DB2260440A9004AE6DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA843D8B260440A6004AE6DD = {
+			isa = PBXGroup;
+			children = (
+				FA843D96260440A6004AE6DD /* Subscription Dock */,
+				FA843DAD260440A9004AE6DD /* Subscription DockTests */,
+				FA843DB8260440A9004AE6DD /* Subscription DockUITests */,
+				FA843D95260440A6004AE6DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA843D95260440A6004AE6DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA843D94260440A6004AE6DD /* Subscription Dock.app */,
+				FA843DAA260440A9004AE6DD /* Subscription DockTests.xctest */,
+				FA843DB5260440A9004AE6DD /* Subscription DockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA843D96260440A6004AE6DD /* Subscription Dock */ = {
+			isa = PBXGroup;
+			children = (
+				FA843D97260440A6004AE6DD /* AppDelegate.swift */,
+				FA843D99260440A6004AE6DD /* SceneDelegate.swift */,
+				FA843D9D260440A6004AE6DD /* Main.storyboard */,
+				FA843DA0260440A9004AE6DD /* Assets.xcassets */,
+				FA843DA2260440A9004AE6DD /* LaunchScreen.storyboard */,
+				FA843DA5260440A9004AE6DD /* Info.plist */,
+				FAB797E8260D41AF008CE0E6 /* NewSubscriptionViewController.swift */,
+				FAB7987626102955008CE0E6 /* MainViewController.swift */,
+				FAB7986E261016DD008CE0E6 /* AlertsViewController.swift */,
+				FA6323BA261C042E0045D50B /* DataModel.xcdatamodeld */,
+			);
+			path = "Subscription Dock";
+			sourceTree = "<group>";
+		};
+		FA843DAD260440A9004AE6DD /* Subscription DockTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA843DAE260440A9004AE6DD /* Subscription_DockTests.swift */,
+				FA843DB0260440A9004AE6DD /* Info.plist */,
+			);
+			path = "Subscription DockTests";
+			sourceTree = "<group>";
+		};
+		FA843DB8260440A9004AE6DD /* Subscription DockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA843DB9260440A9004AE6DD /* Subscription_DockUITests.swift */,
+				FA843DBB260440A9004AE6DD /* Info.plist */,
+			);
+			path = "Subscription DockUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA843D93260440A6004AE6DD /* Subscription Dock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA843DBE260440A9004AE6DD /* Build configuration list for PBXNativeTarget "Subscription Dock" */;
+			buildPhases = (
+				FA843D90260440A6004AE6DD /* Sources */,
+				FA843D91260440A6004AE6DD /* Frameworks */,
+				FA843D92260440A6004AE6DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Subscription Dock";
+			productName = "Subscription Dock";
+			productReference = FA843D94260440A6004AE6DD /* Subscription Dock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA843DA9260440A9004AE6DD /* Subscription DockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA843DC1260440A9004AE6DD /* Build configuration list for PBXNativeTarget "Subscription DockTests" */;
+			buildPhases = (
+				FA843DA6260440A9004AE6DD /* Sources */,
+				FA843DA7260440A9004AE6DD /* Frameworks */,
+				FA843DA8260440A9004AE6DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA843DAC260440A9004AE6DD /* PBXTargetDependency */,
+			);
+			name = "Subscription DockTests";
+			productName = "Subscription DockTests";
+			productReference = FA843DAA260440A9004AE6DD /* Subscription DockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA843DB4260440A9004AE6DD /* Subscription DockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA843DC4260440A9004AE6DD /* Build configuration list for PBXNativeTarget "Subscription DockUITests" */;
+			buildPhases = (
+				FA843DB1260440A9004AE6DD /* Sources */,
+				FA843DB2260440A9004AE6DD /* Frameworks */,
+				FA843DB3260440A9004AE6DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA843DB7260440A9004AE6DD /* PBXTargetDependency */,
+			);
+			name = "Subscription DockUITests";
+			productName = "Subscription DockUITests";
+			productReference = FA843DB5260440A9004AE6DD /* Subscription DockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA843D8C260440A6004AE6DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					FA843D93260440A6004AE6DD = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					FA843DA9260440A9004AE6DD = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = FA843D93260440A6004AE6DD;
+					};
+					FA843DB4260440A9004AE6DD = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = FA843D93260440A6004AE6DD;
+					};
+				};
+			};
+			buildConfigurationList = FA843D8F260440A6004AE6DD /* Build configuration list for PBXProject "Subscription Dock" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA843D8B260440A6004AE6DD;
+			productRefGroup = FA843D95260440A6004AE6DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA843D93260440A6004AE6DD /* Subscription Dock */,
+				FA843DA9260440A9004AE6DD /* Subscription DockTests */,
+				FA843DB4260440A9004AE6DD /* Subscription DockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA843D92260440A6004AE6DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA843DA4260440A9004AE6DD /* LaunchScreen.storyboard in Resources */,
+				FA843DA1260440A9004AE6DD /* Assets.xcassets in Resources */,
+				FA843D9F260440A6004AE6DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA843DA8260440A9004AE6DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA843DB3260440A9004AE6DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA843D90260440A6004AE6DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB797E9260D41AF008CE0E6 /* NewSubscriptionViewController.swift in Sources */,
+				FAB7986F261016DD008CE0E6 /* AlertsViewController.swift in Sources */,
+				FA843D98260440A6004AE6DD /* AppDelegate.swift in Sources */,
+				FA6323BC261C042E0045D50B /* DataModel.xcdatamodeld in Sources */,
+				FA843D9A260440A6004AE6DD /* SceneDelegate.swift in Sources */,
+				FAB7987726102955008CE0E6 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA843DA6260440A9004AE6DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA843DAF260440A9004AE6DD /* Subscription_DockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA843DB1260440A9004AE6DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA843DBA260440A9004AE6DD /* Subscription_DockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA843DAC260440A9004AE6DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA843D93260440A6004AE6DD /* Subscription Dock */;
+			targetProxy = FA843DAB260440A9004AE6DD /* PBXContainerItemProxy */;
+		};
+		FA843DB7260440A9004AE6DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA843D93260440A6004AE6DD /* Subscription Dock */;
+			targetProxy = FA843DB6260440A9004AE6DD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA843D9D260440A6004AE6DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA843D9E260440A6004AE6DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA843DA2260440A9004AE6DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA843DA3260440A9004AE6DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA843DBC260440A9004AE6DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA843DBD260440A9004AE6DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA843DBF260440A9004AE6DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6TEV22STA;
+				INFOPLIST_FILE = "Subscription Dock/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-Dock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA843DC0260440A9004AE6DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6TEV22STA;
+				INFOPLIST_FILE = "Subscription Dock/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-Dock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FA843DC2260440A9004AE6DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6TEV22STA;
+				INFOPLIST_FILE = "Subscription DockTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-DockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Subscription Dock.app/Subscription Dock";
+			};
+			name = Debug;
+		};
+		FA843DC3260440A9004AE6DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6TEV22STA;
+				INFOPLIST_FILE = "Subscription DockTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-DockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Subscription Dock.app/Subscription Dock";
+			};
+			name = Release;
+		};
+		FA843DC5260440A9004AE6DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6TEV22STA;
+				INFOPLIST_FILE = "Subscription DockUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-DockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Subscription Dock";
+			};
+			name = Debug;
+		};
+		FA843DC6260440A9004AE6DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T6TEV22STA;
+				INFOPLIST_FILE = "Subscription DockUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-DockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Subscription Dock";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA843D8F260440A6004AE6DD /* Build configuration list for PBXProject "Subscription Dock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA843DBC260440A9004AE6DD /* Debug */,
+				FA843DBD260440A9004AE6DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA843DBE260440A9004AE6DD /* Build configuration list for PBXNativeTarget "Subscription Dock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA843DBF260440A9004AE6DD /* Debug */,
+				FA843DC0260440A9004AE6DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA843DC1260440A9004AE6DD /* Build configuration list for PBXNativeTarget "Subscription DockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA843DC2260440A9004AE6DD /* Debug */,
+				FA843DC3260440A9004AE6DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA843DC4260440A9004AE6DD /* Build configuration list for PBXNativeTarget "Subscription DockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA843DC5260440A9004AE6DD /* Debug */,
+				FA843DC6260440A9004AE6DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA6323BA261C042E0045D50B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA6323BB261C042E0045D50B /* DataModel.xcdatamodel */,
+			);
+			currentVersion = FA6323BB261C042E0045D50B /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA843D8C260440A6004AE6DD /* Project object */;
+}
