@@ -25,6 +25,7 @@ class NewSubscriptionViewController: UIViewController {
     
     
     
+    
     var iconPicker = UIImagePickerController()
     
     //Holds the entities of the subscription
@@ -75,6 +76,11 @@ class NewSubscriptionViewController: UIViewController {
 //        self.saveName(name: subNameSave)
         
     
+    }
+    
+    
+    @IBAction func unwindToNewSubscriptionVC(segue: UIStoryboardSegue){
+        print("unwind to main VC")
     }
      
 

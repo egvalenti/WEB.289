@@ -170,9 +170,6 @@
                                         <state key="normal" title="&lt; Back">
                                             <color key="titleColor" red="0.83137254900000002" green="0.61176470589999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="py1-lQ-mLC" kind="unwind" unwindAction="unwindToMainVCWithSegue:" id="qVs-Nt-ELt"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuO-30-qMj">
                                         <rect key="frame" x="80" y="0.0" width="244" height="60"/>
@@ -191,6 +188,7 @@
                                         </state>
                                         <connections>
                                             <action selector="doneBtnPressed:" destination="vUI-ni-T1o" eventType="touchUpInside" id="hK0-7J-wUz"/>
+                                            <segue destination="py1-lQ-mLC" kind="unwind" unwindAction="unwindToMainVCWithSegue:" id="sY3-Mc-TkH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -257,7 +255,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEw-Ft-QZr">
                                                 <rect key="frame" x="0.0" y="116" width="374" height="54"/>
                                                 <color key="backgroundColor" red="0.14509803921568626" green="0.16862745098039217" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Cycle">
+                                                <state key="normal" title="Billing Cycle">
                                                     <color key="titleColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -667,7 +665,7 @@
         <!--Cycle View Controller-->
         <scene sceneID="e6k-GA-DcF">
             <objects>
-                <viewController id="M6a-4g-qqT" userLabel="Cycle View Controller" sceneMemberID="viewController">
+                <viewController id="M6a-4g-qqT" userLabel="Cycle View Controller" customClass="BillingCycleViewController" customModule="Subscription_Dock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kAQ-fW-8Xc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -688,7 +686,7 @@
                                             <segue destination="Wwm-w1-7Bn" kind="unwind" unwindAction="unwindToNewSubVCWithSegue:" id="aXB-MV-cbP"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-G0-UUm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Billing Cycle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rl-G0-UUm">
                                         <rect key="frame" x="80" y="0.0" width="254" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -703,6 +701,9 @@
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.83137254900000002" green="0.61176470589999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Wwm-w1-7Bn" kind="unwind" unwindAction="unwindToNewSubscriptionVCWithSegue:" id="fgD-qc-G98"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -711,7 +712,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1sN-sL-vyd">
-                                <rect key="frame" x="20" y="60" width="374" height="270"/>
+                                <rect key="frame" x="20" y="60" width="374" height="215"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7o-td-aOj">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -719,37 +720,42 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="GS8-wy-puR"/>
                                         </constraints>
-                                        <state key="normal" title="None">
+                                        <state key="normal" title="Free Trial">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="billingCyclePressed:" destination="M6a-4g-qqT" eventType="touchUpInside" id="QQx-Xm-2IQ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4t-S4-J1k">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4t-S4-J1k">
                                         <rect key="frame" x="0.0" y="55" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Day of 8 AM">
+                                        <state key="normal" title="Monthly">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="billingCyclePressed:" destination="M6a-4g-qqT" eventType="touchUpInside" id="Prz-CX-Ymk"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-V8-o2E">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-V8-o2E">
                                         <rect key="frame" x="0.0" y="110" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="One day before 8 AM">
+                                        <state key="normal" title="Quarterly">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="billingCyclePressed:" destination="M6a-4g-qqT" eventType="touchUpInside" id="3uw-iu-f0z"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVb-oH-aPl">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVb-oH-aPl">
                                         <rect key="frame" x="0.0" y="165" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="2 days before 8 AM">
+                                        <state key="normal" title="Anually">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m6-ih-gIC">
-                                        <rect key="frame" x="0.0" y="220" width="374" height="50"/>
-                                        <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="One week before 8 AM">
-                                            <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
+                                        <connections>
+                                            <action selector="billingCyclePressed:" destination="M6a-4g-qqT" eventType="touchUpInside" id="icG-tl-Gr5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -765,6 +771,16 @@
                             <constraint firstItem="1sN-sL-vyd" firstAttribute="top" secondItem="WZI-2j-W13" secondAttribute="bottom" id="sq0-s1-Xv8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="annuallyBtn" destination="JVb-oH-aPl" id="FjQ-0D-Lf0"/>
+                        <outlet property="freeTrialBtn" destination="N7o-td-aOj" id="ahL-BD-g3c"/>
+                        <outlet property="monthlyBtn" destination="y4t-S4-J1k" id="cra-RA-2CN"/>
+                        <outlet property="quarterlyBtn" destination="65O-V8-o2E" id="lAg-fO-ldf"/>
+                        <outletCollection property="billCycleBtns" destination="N7o-td-aOj" collectionClass="NSMutableArray" id="cjG-I9-4cr"/>
+                        <outletCollection property="billCycleBtns" destination="y4t-S4-J1k" collectionClass="NSMutableArray" id="UIy-Gs-acT"/>
+                        <outletCollection property="billCycleBtns" destination="65O-V8-o2E" collectionClass="NSMutableArray" id="a9T-MG-Hws"/>
+                        <outletCollection property="billCycleBtns" destination="JVb-oH-aPl" collectionClass="NSMutableArray" id="tkP-hf-DmV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBB-zP-EGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Wwm-w1-7Bn" userLabel="Exit" sceneMemberID="exit"/>
@@ -774,7 +790,7 @@
         <!--Alerts View Controller-->
         <scene sceneID="ega-zg-bt0">
             <objects>
-                <viewController id="alV-NH-Z6J" userLabel="Alerts View Controller" sceneMemberID="viewController">
+                <viewController id="alV-NH-Z6J" userLabel="Alerts View Controller" customClass="AlertsViewController" customModule="Subscription_Dock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fFj-Sq-RH1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -788,37 +804,53 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="2td-SM-nmM"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="None">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="alertPressed:" destination="alV-NH-Z6J" eventType="touchUpInside" id="flg-gO-Zep"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-J6-0QK">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdY-J6-0QK">
                                         <rect key="frame" x="0.0" y="55" width="374" height="50"/>
-                                        <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.16287562250000001" green="0.1913843751" blue="0.21908807750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Day of 8 AM">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="alertPressed:" destination="alV-NH-Z6J" eventType="touchUpInside" id="gsN-bV-huD"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhw-cm-aC8">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhw-cm-aC8">
                                         <rect key="frame" x="0.0" y="110" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="One day before 8 AM">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="alertPressed:" destination="alV-NH-Z6J" eventType="touchUpInside" id="dEE-I9-5bv"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8in-MO-az2">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8in-MO-az2">
                                         <rect key="frame" x="0.0" y="165" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="2 days before 8 AM">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="alertPressed:" destination="alV-NH-Z6J" eventType="touchUpInside" id="7Ov-ze-8Gu"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02q-ne-otA">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02q-ne-otA">
                                         <rect key="frame" x="0.0" y="220" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.1450980392" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="One week before 8 AM">
                                             <color key="titleColor" red="0.96416646240000003" green="0.98044270280000001" blue="0.98453944920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="alertPressed:" destination="alV-NH-Z6J" eventType="touchUpInside" id="vpq-1M-76y"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -834,9 +866,6 @@
                                         <state key="normal" title="&lt; Back">
                                             <color key="titleColor" red="0.83137254900000002" green="0.61176470589999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="HvG-BR-7vv" kind="unwind" unwindAction="unwindToNewSubVCWithSegue:" id="mM0-XA-Dbc"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-ct-S1X">
                                         <rect key="frame" x="80" y="0.0" width="254" height="60"/>
@@ -853,6 +882,9 @@
                                         <state key="normal" title="Done">
                                             <color key="titleColor" red="0.83137254900000002" green="0.61176470589999998" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="HvG-BR-7vv" kind="unwind" unwindAction="unwindToNewSubscriptionVCWithSegue:" id="Sy3-AT-mIJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -871,6 +903,18 @@
                             <constraint firstItem="rWy-Gm-pfW" firstAttribute="leading" secondItem="fFj-Sq-RH1" secondAttribute="leading" constant="20" id="z7L-wF-OYl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dayBtn" destination="YdY-J6-0QK" id="wAv-11-MD5"/>
+                        <outlet property="noneBtn" destination="XRn-M7-kDh" id="X75-HM-7v3"/>
+                        <outlet property="oneDayBtn" destination="rhw-cm-aC8" id="bEQ-cj-ixR"/>
+                        <outlet property="twoDayBtn" destination="8in-MO-az2" id="5Yj-g9-BTy"/>
+                        <outlet property="twoWeekBtn" destination="02q-ne-otA" id="wbh-W9-fbP"/>
+                        <outletCollection property="alertBtns" destination="XRn-M7-kDh" collectionClass="NSMutableArray" id="7Ej-CT-8dP"/>
+                        <outletCollection property="alertBtns" destination="YdY-J6-0QK" collectionClass="NSMutableArray" id="7BD-Fz-xdv"/>
+                        <outletCollection property="alertBtns" destination="rhw-cm-aC8" collectionClass="NSMutableArray" id="4aU-Ov-xzD"/>
+                        <outletCollection property="alertBtns" destination="8in-MO-az2" collectionClass="NSMutableArray" id="GUu-wW-8Jw"/>
+                        <outletCollection property="alertBtns" destination="02q-ne-otA" collectionClass="NSMutableArray" id="SAW-ZU-6oN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVA-GA-0cw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="HvG-BR-7vv" userLabel="Exit" sceneMemberID="exit"/>
