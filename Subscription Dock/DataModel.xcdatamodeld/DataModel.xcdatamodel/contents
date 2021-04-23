@@ -4,7 +4,7 @@
         <attribute name="alert" optional="YES" attributeType="String"/>
         <attribute name="billDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="category" optional="YES" attributeType="String"/>
-        <attribute name="cost" optional="YES" attributeType="Decimal" defaultValueString="0"/>
+        <attribute name="cost" optional="YES" attributeType="String"/>
         <attribute name="cycle" optional="YES" attributeType="String"/>
         <attribute name="icon" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>

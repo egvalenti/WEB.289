@@ -67,7 +67,7 @@ class BillingCycleViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var newSubVC = segue.destination as! NewSubscriptionViewController
-        newSubVC.subCycleDate.setTitle("Alert: \(selectedCycle)", for: .normal)
+        newSubVC.subCycle.setTitle("\(selectedCycle)", for: .normal)
     }
     
 

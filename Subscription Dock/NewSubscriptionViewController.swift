@@ -16,21 +16,19 @@ class NewSubscriptionViewController: UIViewController {
     @IBOutlet weak var subCost: UITextField!
     @IBOutlet weak var iconPick: UIButton!
     @IBOutlet weak var subCategory: UIButton!
-    @IBOutlet weak var subCycleDate: UIButton!
+    @IBOutlet weak var subCycle: UIButton!
     @IBOutlet weak var subBillDate: UIDatePicker!
     @IBOutlet weak var subAlert: UIButton!
     @IBOutlet weak var subNotes: UITextField!
     @IBOutlet weak var doneBtn: UIButton!
     
-    
-    
-    
-    
+  
     var iconPicker = UIImagePickerController()
+    var subscriptions = [Subscription]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    //Holds the entities of the subscription
-    //cell.textLabel?.text = subscription.value(forKeyPath: "entity") as? String
-    var subscriptions: [NSManagedObject] = []
+    var costs = [Int]()
+    
     
     
     override func viewDidLoad() {
@@ -49,32 +47,30 @@ class NewSubscriptionViewController: UIViewController {
         present(iconPicker, animated: true, completion: nil)
     }
     
-    func saveName(name: String){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-    
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let image = NSEntityDescription.entity(forEntityName: "Subscription", in: managedContext)!
-        let subscription = NSManagedObject(entity: image, insertInto: managedContext)
-        subscription.setValue(name, forKeyPath: "name")
-        
-        do {
-            try managedContext.save()
-            subscriptions.append(subscription)
-        } catch let error as NSError {
-            print("Sorry, couldn't save. \(error), \(error.userInfo)")
-        }
-    }
+
     
     
     @IBAction func doneBtnPressed(_ sender: Any) {
-//        guard let subNameSave = subName.text else{
-//            return
-//        }
-//        self.saveName(name: subNameSave)
         
+        let model = Subscription(context: context)
+        
+        if   let imgData = icon.image?.pngData(){
+            DataBaseHelper.shareInstance.saveIcon(at: imgData)
+        }
+        
+        if let price = Int(subCost.text!){
+            costs.append(price)
+        }
+        model.name = subName?.text
+        model.cost = subCost?.text
+        model.category = subCategory?.titleLabel?.text
+        model.cycle = subCycle.titleLabel?.text
+        model.alert = subAlert.titleLabel?.text
+        model.notes = subNotes?.text
+        model.billDate = subBillDate.date
+        saveContext()
+        print(costs)
+
     
     }
     
@@ -86,7 +82,7 @@ class NewSubscriptionViewController: UIViewController {
 
 }//end of class
 
-//extension for Image picker for icon
+//MARK: extension for Image picker for icon
 extension NewSubscriptionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         

@@ -9,6 +9,7 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
     
+
     @IBOutlet weak var audiobooksBtn: UIButton!
     @IBOutlet weak var businessBtn: UIButton!
     @IBOutlet weak var childcareBtn: UIButton!
@@ -26,7 +27,6 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var shoppingBtn: UIButton!
     @IBOutlet weak var utilitiesBtn: UIButton!
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,10 @@ class CategoriesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    
+
     
     var selectedCategory: String = ""
     
@@ -45,7 +49,7 @@ class CategoriesViewController: UIViewController {
         switch button.tag {
         case 0:
             selectedCategory = "Audiobooks"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
+            audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -63,8 +67,8 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 1:
             selectedCategory = "Business"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            businessBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -81,9 +85,9 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 2:
             selectedCategory = "Childcare"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            childcareBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -99,10 +103,10 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 3:
             selectedCategory = "Fashion"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            fashionBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -117,11 +121,11 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 4:
             selectedCategory = "Education"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            educationBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -135,12 +139,12 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 5:
             selectedCategory = "Employment"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            employmentBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             financeBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -153,13 +157,13 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 6:
             selectedCategory = "Entertainment"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             financeBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -171,7 +175,6 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 7:
             selectedCategory = "Essentials"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -179,6 +182,7 @@ class CategoriesViewController: UIViewController {
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             financeBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -189,7 +193,6 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 8:
             selectedCategory = "Finance"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -198,6 +201,7 @@ class CategoriesViewController: UIViewController {
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            financeBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -207,7 +211,6 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 9:
             selectedCategory = "Food/Drink"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -217,6 +220,7 @@ class CategoriesViewController: UIViewController {
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             financeBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -225,7 +229,6 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 10:
             selectedCategory = "Health"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -236,6 +239,7 @@ class CategoriesViewController: UIViewController {
             essentialsBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             financeBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            healthBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             otherBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -243,7 +247,6 @@ class CategoriesViewController: UIViewController {
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 11:
             selectedCategory = "Internet"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -255,13 +258,13 @@ class CategoriesViewController: UIViewController {
             financeBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            internetBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             otherBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             shoppingBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 12:
             selectedCategory = "Medical"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -274,12 +277,12 @@ class CategoriesViewController: UIViewController {
             foodDrinkBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            medicalBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             otherBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             shoppingBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 13:
             selectedCategory = "Other"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -293,11 +296,11 @@ class CategoriesViewController: UIViewController {
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            otherBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             shoppingBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 14:
             selectedCategory = "Shopping"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -312,14 +315,14 @@ class CategoriesViewController: UIViewController {
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             otherBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            shoppingBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         case 15:
             selectedCategory = "Utilities"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
-            fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            fashionBtn.titleLabel?.font = UIFont(name:"Helvetica", size: 15)
             educationBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             employmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             entertainmentBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -331,10 +334,10 @@ class CategoriesViewController: UIViewController {
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             otherBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             shoppingBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
-            
+            utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
         default:
-            selectedCategory = "Audiobooks"
-            button.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
+            selectedCategory = "Other"
+            audiobooksBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             businessBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             childcareBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             fashionBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
@@ -347,15 +350,26 @@ class CategoriesViewController: UIViewController {
             healthBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             internetBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             medicalBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
-            otherBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
+            otherBtn.titleLabel?.font = UIFont(name: "Helvetica-Bold", size: 30)
             shoppingBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
             utilitiesBtn.titleLabel?.font = UIFont(name: "Helvetica", size: 15)
         }
     }
     
+    
+    
+    
+    
+    @IBAction func doneBtnPressed(_ sender: Any) {
+        
+        
+    }
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var newSubVC = segue.destination as! NewSubscriptionViewController
-        newSubVC.subAlert.setTitle("Alert: \(selectedCategory)", for: .normal)
+        newSubVC.subCategory.setTitle("\(selectedCategory)", for: .normal)
     }
     
 

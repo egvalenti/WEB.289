@@ -81,7 +81,7 @@ class AlertsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var newSubVC = segue.destination as! NewSubscriptionViewController
-        newSubVC.subAlert.setTitle("Alert: \(selectedAlert)", for: .normal)
+        newSubVC.subAlert.setTitle("\(selectedAlert)", for: .normal)
     }
     
 
