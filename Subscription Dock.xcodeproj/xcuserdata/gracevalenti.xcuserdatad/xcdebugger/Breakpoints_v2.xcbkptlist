@@ -23,49 +23,189 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "38F8B039-BB87-4989-BAD1-5785DBF89404"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Subscription Dock/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B9E7A4C3-36FE-4C28-9F48-93EDEB7BBD1B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Subscription Dock/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Subscription Dock/NewSubscriptionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "costsStruc"
-            landmarkType = "14">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "NewSubscriptionViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6 - 97534308026d5095"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Dock.NewSubscriptionViewController.costs.getter : Swift.Array&lt;__C.NSDecimalNumber&gt;"
+                  moduleName = "Subscription Dock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracevalenti/Desktop/WEB-289-0001/Final%20Project/Subscription%20Dock/Subscription%20Dock/NewSubscriptionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6 - 21a0a6c7ff7089"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Dock.NewSubscriptionViewController.costs.setter : Swift.Array&lt;__C.NSDecimalNumber&gt;"
+                  moduleName = "Subscription Dock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracevalenti/Desktop/WEB-289-0001/Final%20Project/Subscription%20Dock/Subscription%20Dock/NewSubscriptionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6 - cd019dd147c3d4fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Dock.NewSubscriptionViewController.costs.modify : Swift.Array&lt;__C.NSDecimalNumber&gt;"
+                  moduleName = "Subscription Dock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracevalenti/Desktop/WEB-289-0001/Final%20Project/Subscription%20Dock/Subscription%20Dock/NewSubscriptionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6 - 4fa9066c072a0bf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Dock.NewSubscriptionViewController.costs.modify : Swift.Array&lt;__C.NSDecimalNumber&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Subscription Dock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracevalenti/Desktop/WEB-289-0001/Final%20Project/Subscription%20Dock/Subscription%20Dock/NewSubscriptionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6 - 7d6dfa056ac721da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Dock.NewSubscriptionViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Subscription_Dock.NewSubscriptionViewController"
+                  moduleName = "Subscription Dock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracevalenti/Desktop/WEB-289-0001/Final%20Project/Subscription%20Dock/Subscription%20Dock/NewSubscriptionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "2299">
+               </Location>
+               <Location
+                  uuid = "CBA975C8-AB27-4D0B-BFF3-7982989B45A6 - 4e412268f0977096"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Subscription_Dock.NewSubscriptionViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Subscription_Dock.NewSubscriptionViewController&gt;"
+                  moduleName = "Subscription Dock"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracevalenti/Desktop/WEB-289-0001/Final%20Project/Subscription%20Dock/Subscription%20Dock/NewSubscriptionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "2234">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7C5E349-8F83-421E-8F5A-CD1B0570DAFB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Subscription Dock/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30F20702-48D2-4EE0-BDAD-D0655B9B8759"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Subscription Dock/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E2EECD5-04C8-4B7D-9763-272DF7A965F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Subscription Dock/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "MainViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "551BC9FF-BE9C-4190-8A4E-DFD6B2467D38"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Subscription Dock/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E60D24BB-EBA9-47E4-842B-0DA06BEF8182"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Subscription Dock/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

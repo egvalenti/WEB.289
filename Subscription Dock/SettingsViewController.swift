@@ -9,21 +9,20 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var nightMode: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func swichChanged(_ sender: Any) {
+        let alert = UIAlertController(title: "Night mode", message: "This feature is coming in the next update", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true) {
+            
+        }
     }
-    */
-
+    
 }

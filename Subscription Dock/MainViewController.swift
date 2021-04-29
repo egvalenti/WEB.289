@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,44 +21,44 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var settingsBtn: UIButton!
     @IBOutlet var aboutBtn: UIButton!
     @IBOutlet var leadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var sortBtn: UIButton!
+    
     
     
     var subscriptionName: [Subscription] = []
     var sName: String = " "
     public var subscriptions = [Subscription]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    
-    //MARK: Core Stack set up
-    //not sure if needed
-//    private let persistentContainer = NSPersistentContainer(name: "Subscription")
-//    persistentContainer.loadPersistentStores { (NSPersistentStoreDescription, Error) in
-//        if let error = Error {
-//            print("unable to load persistent sotre")
-//            print("\(error), \(error.localizedDescription)")
-//        }else {
-//
-//        }
-//    }
+    let ceneter = UNUserNotificationCenter.current()
+    var costs: [NSDecimalNumber] = []
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         menuView.layer.shadowOpacity = 1
         menuView.layer.shadowRadius = 5
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         fetchSubscriptions()
-        
-        
-        
+        numberOfSubscriptions()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        fetchSubscriptions()
-        tableView.reloadData()
+        self.fetchSubscriptions()
+        self.tableView.reloadData()
+        print(subscriptionName.count)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.fetchSubscriptions()
+        self.tableView.reloadData()
+        numberOfSubscriptions()
     }
 
     
@@ -71,22 +72,61 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell (withIdentifier: "SubscriptionCell", for: indexPath) as! SubscriptionTableViewCell
         let subscription = subscriptionName[indexPath.row]
 
-        
-        var arr = DataBaseHelper.shareInstance.fetchIcon()
-        //cell.iconIV.image = UIImage(data: arr[].icon!)
-        
-        //cell.iconIV.image = UIImage(data: .icon!)
+        //MARK: Retrieving data and popluating table view cells
+        if let data = subscription.icon{
+            cell.iconIV.image = UIImage(data: data)
+        }
+        if cell.iconIV.image == nil{
+            cell.iconIV.image = UIImage(named: "defaultIcon")
+        }
         cell.nameLabel?.text = subscription.name
         cell.cycleLabel?.text = subscription.cycle
-        cell.costLabel?.text = subscription.cost
+        cell.costLabel?.text = subscription.cost?.description
+        costs.append(subscription.cost!)
+        print(subscriptionName.count)
         return cell
     }
     
+    
+    //MARK: This is handling the detailed subscription view controller
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = indexPath.row
+        performSegue(withIdentifier: "showSubscriptionDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SubscriptionViewController {
+            destination.subscription = subscriptionName[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
     
     
+    //MARK: deleting cells based on swipe
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { _,_,_ in
+            
+            self.context.delete(self.subscriptionName[indexPath.row])
+            saveContext()
+            self.fetchSubscriptions()
+            
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.numberOfSubscriptions()
+        }
+        
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        
+        return swipe
+    }
+    
+    
+    
+    
+    //MARK: Fetching the subscriptions
     func fetchSubscriptions(){
         let request = NSFetchRequest<Subscription>(entityName: "Subscription")
 
@@ -96,13 +136,11 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
             print("Sorry \(error)")
         }
     }
-
-    
-    
     
 
     // MARK: - Unwind segue method
     @IBAction func unwindToMainVC(segue: UIStoryboardSegue){
+        self.tableView.reloadData()
         
     }
 
@@ -120,4 +158,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func closeMenu(_ sender: Any) {
         leadingConstraint.constant = -340
     }
+    
+    
+    
+    //MARK: cost math
+
+//    func addCost() {
+//        let adding = costs.map{Double(truncating: $0)}.reduce(0, +)
+//        let formattedPrice = String(format: "%.2f", adding/12)
+//        avgSpentLabel.text = ("Average spent monthly $\(formattedPrice)")
+//        print("Testing\(formattedPrice)")
+//    }
+    
+    func numberOfSubscriptions() {
+        avgSpentLabel.text =  ("Number of current subscriptions: \(subscriptionName.count.description)")
+    }
+    
+    
 }

@@ -14,7 +14,6 @@
 		FA63242426255BC40045D50B /* BillingCycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63242326255BC40045D50B /* BillingCycleViewController.swift */; };
 		FA632429262901880045D50B /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA632428262901880045D50B /* CategoriesViewController.swift */; };
 		FA77CC4526324834001AFC9A /* SubscriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77CC4426324834001AFC9A /* SubscriptionTableViewCell.swift */; };
-		FA77CC4A263264B3001AFC9A /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA77CC49263264B3001AFC9A /* DataBaseHelper.swift */; };
 		FA843D98260440A6004AE6DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA843D97260440A6004AE6DD /* AppDelegate.swift */; };
 		FA843D9A260440A6004AE6DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA843D99260440A6004AE6DD /* SceneDelegate.swift */; };
 		FA843D9F260440A6004AE6DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA843D9D260440A6004AE6DD /* Main.storyboard */; };
@@ -25,6 +24,8 @@
 		FAB797E9260D41AF008CE0E6 /* NewSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB797E8260D41AF008CE0E6 /* NewSubscriptionViewController.swift */; };
 		FAB7986F261016DD008CE0E6 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7986E261016DD008CE0E6 /* AlertsViewController.swift */; };
 		FAB7987726102955008CE0E6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7987626102955008CE0E6 /* MainViewController.swift */; };
+		FAFA18B52633D72900F3C1E1 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA18B42633D72900F3C1E1 /* SubscriptionViewController.swift */; };
+		FAFA18BD26352C8700F3C1E1 /* CostCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA18BC26352C8700F3C1E1 /* CostCategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,6 @@
 		FA63242326255BC40045D50B /* BillingCycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCycleViewController.swift; sourceTree = "<group>"; };
 		FA632428262901880045D50B /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		FA77CC4426324834001AFC9A /* SubscriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTableViewCell.swift; sourceTree = "<group>"; };
-		FA77CC49263264B3001AFC9A /* DataBaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		FA843D94260440A6004AE6DD /* Subscription Dock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Subscription Dock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA843D97260440A6004AE6DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA843D99260440A6004AE6DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		FAB797E8260D41AF008CE0E6 /* NewSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSubscriptionViewController.swift; sourceTree = "<group>"; };
 		FAB7986E261016DD008CE0E6 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		FAB7987626102955008CE0E6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FAFA18B42633D72900F3C1E1 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
+		FAFA18BC26352C8700F3C1E1 /* CostCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostCategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				FA843D97260440A6004AE6DD /* AppDelegate.swift */,
 				FA843D99260440A6004AE6DD /* SceneDelegate.swift */,
 				FA843D9D260440A6004AE6DD /* Main.storyboard */,
+				FAFA18B42633D72900F3C1E1 /* SubscriptionViewController.swift */,
 				FA632428262901880045D50B /* CategoriesViewController.swift */,
 				FA843DA0260440A9004AE6DD /* Assets.xcassets */,
 				FA843DA2260440A9004AE6DD /* LaunchScreen.storyboard */,
@@ -135,7 +138,7 @@
 				FA14709E262F194E0068017E /* AboutViewController.swift */,
 				FA021D502632288000CCF9FA /* support.swift */,
 				FA77CC4426324834001AFC9A /* SubscriptionTableViewCell.swift */,
-				FA77CC49263264B3001AFC9A /* DataBaseHelper.swift */,
+				FAFA18BC26352C8700F3C1E1 /* CostCategoryViewController.swift */,
 			);
 			path = "Subscription Dock";
 			sourceTree = "<group>";
@@ -291,15 +294,16 @@
 				FA021D512632288000CCF9FA /* support.swift in Sources */,
 				FAB797E9260D41AF008CE0E6 /* NewSubscriptionViewController.swift in Sources */,
 				FA14709F262F194E0068017E /* AboutViewController.swift in Sources */,
-				FA77CC4A263264B3001AFC9A /* DataBaseHelper.swift in Sources */,
 				FAB7986F261016DD008CE0E6 /* AlertsViewController.swift in Sources */,
 				FA14708F262E94920068017E /* SettingsViewController.swift in Sources */,
 				FA63242426255BC40045D50B /* BillingCycleViewController.swift in Sources */,
 				FA77CC4526324834001AFC9A /* SubscriptionTableViewCell.swift in Sources */,
+				FAFA18B52633D72900F3C1E1 /* SubscriptionViewController.swift in Sources */,
 				FA843D98260440A6004AE6DD /* AppDelegate.swift in Sources */,
 				FA6323BC261C042E0045D50B /* DataModel.xcdatamodeld in Sources */,
 				FA843D9A260440A6004AE6DD /* SceneDelegate.swift in Sources */,
 				FA632429262901880045D50B /* CategoriesViewController.swift in Sources */,
+				FAFA18BD26352C8700F3C1E1 /* CostCategoryViewController.swift in Sources */,
 				FAB7987726102955008CE0E6 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +488,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-Dock";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gracevalenti.Subscription-Dock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -504,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "gracevalenti.Subscription-Dock";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gracevalenti.Subscription-Dock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
